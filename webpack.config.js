@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
@@ -19,5 +20,12 @@ module.exports = {
     hot: true, //reload
     compress: true, //enable gzip compression
     historyApiFallback: true, //index.html page will likely have to be served in place of any 404 responses
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Webpack App',
+      filename: 'index.html',
+      template: 'src/template.html'
+    }),
+  ]
 }
