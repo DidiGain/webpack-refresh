@@ -5,4 +5,7 @@ import laughingEmoji from './assets/laughing.svg'
 const laughingEmojiImage = document.getElementById('laughImg')
 laughingEmojiImage.src = laughingEmoji
 
-console.log(generateJoke());
+const jokeBtn = document.getElementById('jokeBtn')
+jokeBtn.addEventListener('click', generateJoke)
+
+generateJoke()
