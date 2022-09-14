@@ -21,6 +21,14 @@ module.exports = {
     compress: true, //enable gzip compression
     historyApiFallback: true, //index.html page will likely have to be served in place of any 404 responses
   },
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Webpack App',
